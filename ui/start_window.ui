@@ -14,7 +14,7 @@
    <string>Подсчёт затрат</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>20</x>
@@ -25,7 +25,7 @@
     </property>
     <layout class="QVBoxLayout" name="verticalLayout">
      <item>
-      <widget class="QTableWidget" name="tableWidget">
+      <widget class="QTableWidget" name="product_table">
        <property name="verticalScrollBarPolicy">
         <enum>Qt::ScrollBarAlwaysOff</enum>
        </property>
@@ -66,14 +66,14 @@
      <item>
       <layout class="QHBoxLayout" name="horizontalLayout">
        <item>
-        <widget class="QPushButton" name="pushButton">
+        <widget class="QPushButton" name="add_row_btn">
          <property name="text">
           <string>Добавить строку</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButton_2">
+        <widget class="QPushButton" name="remove_row_btn">
          <property name="text">
           <string>Удалить строку</string>
          </property>
@@ -83,7 +83,7 @@
      </item>
     </layout>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>380</x>
@@ -94,7 +94,7 @@
     </property>
     <layout class="QVBoxLayout" name="verticalLayout_2">
      <item>
-      <widget class="QCalendarWidget" name="calendarWidget">
+      <widget class="QCalendarWidget" name="calendar">
        <property name="locale">
         <locale language="Russian" country="Russia"/>
        </property>
@@ -113,7 +113,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton_3">
+      <widget class="QPushButton" name="save_record_btn">
        <property name="text">
         <string>Сохранить запись</string>
        </property>
