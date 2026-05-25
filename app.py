@@ -1,25 +1,23 @@
-from sources.start_window import Ui_StartWindow
 from PySide6.QtWidgets import QApplication, QMainWindow
+from sources.forms.start_window import Ui_StartWindow
+from sources.widgets_slot import buttons
 
 
 class App(QMainWindow):
     def __init__(self):
+        self._init_components()
+    
+    def _init_components(self):
+        "Window"
         super().__init__()
-        self.ui_components = Ui_StartWindow()
-        self.ui_components.setupUi(self)
+        self.ui_elements = Ui_StartWindow()
+        self.ui_elements.setupUi(self)
         self.show()
 
-        self.ui_components.add_row_btn.clicked.connect(self.add_row)
-        self.ui_components.remove_row_btn.clicked.connect(self.remove_row)
-    
-    def add_row(self):
-        row_count = self.ui_components.product_table.rowCount()
-        self.ui_components.product_table.insertRow(row_count)
-
-    def remove_row(self):
-        row_count = self.ui_components.product_table.rowCount()
-        self.ui_components.product_table.removeRow(row_count - 1)
-
+        "Buttons"
+        self.btn_actions = buttons.ButtonAction()
+        self.btn_actions.bind(self.ui_elements)
+        
 
 if __name__ == "__main__":
     app = QApplication([])
