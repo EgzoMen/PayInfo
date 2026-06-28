@@ -5,17 +5,19 @@ from sources.widgets_slot import buttons, calendar
 
 class App(QMainWindow):
     def __init__(self):
-        self._init_components()
-    
-    def _init_components(self):
         super().__init__()
         self.ui_elements = Ui_StartWindow()
         self.ui_elements.setupUi(self)
         self.show()
 
-        self.btn_actions = buttons.ButtonAction(self.ui_elements)
-        self.calendar_actions = calendar.CalendarAction(self.ui_elements)
+        self.bind_events()
 
+    def bind_events(self):
+        self.btn_actions = buttons.ButtonAction(self.ui_elements)
+        self.btn_actions.bind_events()
+
+        self.calendar_actions = calendar.CalendarAction(self.ui_elements)
+        self.calendar_actions.bind_events()
 
 
 if __name__ == "__main__":

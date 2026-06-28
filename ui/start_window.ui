@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>746</width>
+    <width>782</width>
     <height>637</height>
    </rect>
   </property>
@@ -83,13 +83,26 @@
      </item>
     </layout>
    </widget>
-   <widget class="QWidget" name="layoutWidget">
+   <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
       <x>380</x>
-      <y>20</y>
-      <width>345</width>
-      <height>273</height>
+      <y>300</y>
+      <width>381</width>
+      <height>181</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>21</y>
+      <width>381</width>
+      <height>271</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout_2">
@@ -113,11 +126,22 @@
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="save_record_btn">
-       <property name="text">
-        <string>Сохранить запись</string>
-       </property>
-      </widget>
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <item>
+        <widget class="QPushButton" name="save_record_btn">
+         <property name="text">
+          <string>Сохранить запись</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton">
+         <property name="text">
+          <string>Отчёт за месяц</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
      </item>
     </layout>
    </widget>
