@@ -1,7 +1,6 @@
 from ..forms.start_window import Ui_StartWindow
 from ..db import *
 from .message_boxes import Message
-from pprint import pprint
 
 
 class ButtonAction:

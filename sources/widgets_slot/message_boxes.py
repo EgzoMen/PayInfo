@@ -6,5 +6,5 @@ class Message:
     def show_invalid_value_message(cls, line_number):
         cls.message = QMessageBox()
         cls.message.setWindowTitle('Input error')
-        cls.message.setText(f'Invalid input at {line_number} line')
+        cls.message.setText(f'Invalid input at {line_number + 1} line')
         cls.message.show()
